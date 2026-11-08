@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+eval/out/
+*.log
+# Real offer letters never go in the repo; only the fictional ones in eval/letters and public/sample.
+*.pdf
+!public/sample/*.pdf
+*.jpg
+*.jpeg
+*.heic
