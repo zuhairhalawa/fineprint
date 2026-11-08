@@ -18,7 +18,7 @@ import { loadVars } from './try-read.ts';
 const set = process.argv[3] ?? 'letters';
 const dir = new URL(`./${set}/`, import.meta.url);
 const vars = loadVars();
-const models = (vars.GEMINI_MODELS ?? 'gemini-3-flash-preview').split(',');
+const models = (process.env.MODELS ?? vars.GEMINI_MODELS ?? 'gemini-3-flash-preview').split(',');
 const runs = Number(process.argv[2] ?? 1);
 
 interface Row {

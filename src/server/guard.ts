@@ -45,7 +45,7 @@ export function guard(request: Request, bucket: string, limitPerHour: number): R
 }
 
 export function models(env: Env): string[] {
-  return (env.GEMINI_MODELS ?? 'gemini-3-flash-preview,gemini-3.5-flash,gemini-3.1-flash-lite')
+  return (env.GEMINI_MODELS ?? 'gemini-3.1-flash-lite,gemini-3-flash-preview,gemini-3.5-flash')
     .split(',')
     .map((m) => m.trim())
     .filter(Boolean);

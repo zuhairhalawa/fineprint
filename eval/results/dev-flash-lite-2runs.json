@@ -1,0 +1,1702 @@
+{
+ "summary": {
+  "date": "2026-11-08T22:54:21.843Z",
+  "models": [
+   "gemini-3.1-flash-lite"
+  ],
+  "set": "letters",
+  "letters": 8,
+  "runsPerLetter": 2,
+  "planted": 38,
+  "found": 38,
+  "falseAlarms": 0,
+  "medianMs": 2460
+ },
+ "rows": [
+  {
+   "letter": "01-dunes-digital.txt",
+   "run": 1,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 3659,
+   "found": [
+    "probation-length",
+    "non-compete",
+    "basic-share",
+    "training-payback",
+    "passport"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Junior Software Engineer",
+     "quote": "OFFER OF EMPLOYMENT: JUNIOR SOFTWARE ENGINEER",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "DUNES DIGITAL LLC",
+     "quote": "DUNES DIGITAL LLC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "You will be employed on a fixed-term contract of two (2) years, renewable by mutual agreement.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "You will be employed on a fixed-term contract of two (2) years, renewable by mutual agreement.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 10000,
+     "quote": "Your total monthly salary will be AED 10,000 (ten thousand dirhams), made up as follows:",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 4000,
+     "quote": "- Basic salary: AED 4,000 per month",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 9,
+     "quote": "You will be on probation for the first nine (9) months of employment.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Your full salary will be paid during probation.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "During probation, either party may end the employment by giving 14 days' written notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, either party may end this contract by giving one (1) month's written notice.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": {
+     "value": 36,
+     "quote": "For a period of three (3) years after your employment ends, you agree not to work for, consult for, or set up any business that competes with the Company, in any country.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedPlace": {
+     "value": false,
+     "quote": "For a period of three (3) years after your employment ends, you agree not to work for, consult for, or set up any business that competes with the Company, in any country.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedWork": {
+     "value": true,
+     "quote": "you agree not to work for, consult for, or set up any business that competes with the Company, in any country.",
+     "confidence": "high"
+    },
+    "weeklyHours": {
+     "value": 40,
+     "quote": "Normal working hours are 8:30 am to 5:30 pm, Monday to Friday, with a one-hour lunch break.",
+     "confidence": "medium"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "Normal working hours are 8:30 am to 5:30 pm, Monday to Friday, with a one-hour lunch break.",
+     "confidence": "medium"
+    },
+    "annualLeaveDays": {
+     "value": 22,
+     "quote": "You are entitled to twenty-two (22) working days of paid annual leave per year, after completing your probation.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "working",
+     "quote": "You are entitled to twenty-two (22) working days of paid annual leave per year, after completing your probation.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": {
+     "value": 15000,
+     "quote": "If you resign within twenty-four (24) months of your start date, you agree to repay the full cost of this training, estimated at AED 15,000.",
+     "confidence": "high"
+    },
+    "passportHeldByEmployer": {
+     "value": true,
+     "quote": "For safekeeping, your original passport will be held by the HR department for the duration of your employment and returned on request for travel.",
+     "confidence": "high"
+    },
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Unpaid Overtime Expectations",
+      "quote": "You may be asked to work additional hours to meet project deadlines."
+     },
+     {
+      "topic": "Short Acceptance Deadline",
+      "quote": "This offer is valid for seven (7) days from the date of this letter."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "01-dunes-digital.txt",
+   "run": 2,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2982,
+   "found": [
+    "probation-length",
+    "non-compete",
+    "basic-share",
+    "training-payback",
+    "passport"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Junior Software Engineer",
+     "quote": "OFFER OF EMPLOYMENT: JUNIOR SOFTWARE ENGINEER",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "DUNES DIGITAL LLC",
+     "quote": "DUNES DIGITAL LLC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "You will be employed on a fixed-term contract of two (2) years, renewable by mutual agreement.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "You will be employed on a fixed-term contract of two (2) years, renewable by mutual agreement.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 10000,
+     "quote": "Your total monthly salary will be AED 10,000 (ten thousand dirhams), made up as follows:",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 4000,
+     "quote": "- Basic salary: AED 4,000 per month",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 9,
+     "quote": "You will be on probation for the first nine (9) months of employment.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Your full salary will be paid during probation.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "During probation, either party may end the employment by giving 14 days' written notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, either party may end this contract by giving one (1) month's written notice.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": {
+     "value": 36,
+     "quote": "For a period of three (3) years after your employment ends, you agree not to work for, consult for, or set up any business that competes with the Company, in any country.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedPlace": {
+     "value": false,
+     "quote": "in any country.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedWork": {
+     "value": true,
+     "quote": "you agree not to work for, consult for, or set up any business that competes with the Company",
+     "confidence": "high"
+    },
+    "weeklyHours": {
+     "value": 40,
+     "quote": "Normal working hours are 8:30 am to 5:30 pm, Monday to Friday, with a one-hour lunch break.",
+     "confidence": "medium"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "Normal working hours are 8:30 am to 5:30 pm, Monday to Friday, with a one-hour lunch break.",
+     "confidence": "medium"
+    },
+    "annualLeaveDays": {
+     "value": 22,
+     "quote": "You are entitled to twenty-two (22) working days of paid annual leave per year, after completing your probation.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "working",
+     "quote": "You are entitled to twenty-two (22) working days of paid annual leave per year, after completing your probation.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": {
+     "value": 15000,
+     "quote": "If you resign within twenty-four (24) months of your start date, you agree to repay the full cost of this training, estimated at AED 15,000.",
+     "confidence": "high"
+    },
+    "passportHeldByEmployer": {
+     "value": true,
+     "quote": "For safekeeping, your original passport will be held by the HR department for the duration of your employment and returned on request for travel.",
+     "confidence": "high"
+    },
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Unpaid Overtime",
+      "quote": "You may be asked to work additional hours to meet project deadlines."
+     },
+     {
+      "topic": "Acceptance Deadline",
+      "quote": "This offer is valid for seven (7) days from the date of this letter."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "02-clean-saltwater.txt",
+   "run": 1,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2333,
+   "found": [],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Graduate Data Analyst",
+     "quote": "We are pleased to offer you the role of Graduate Data Analyst.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "SALTWATER ANALYTICS LLC",
+     "quote": "SALTWATER ANALYTICS LLC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "Your contract will be a fixed-term contract for two years, renewable by agreement.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "Your contract will be a fixed-term contract for two years, renewable by agreement.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 9000,
+     "quote": "Your gross monthly salary is AED 9,000, consisting of a basic salary of AED 5,400 and a housing and transport allowance of AED 3,600.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 5400,
+     "quote": "Your gross monthly salary is AED 9,000, consisting of a basic salary of AED 5,400 and a housing and transport allowance of AED 3,600.",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Your probation period is six (6) months.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "You will receive your full salary during probation.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "During probation the Company may end your employment with at least 14 days' written notice",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, either party may terminate the contract with 30 days' written notice.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": null,
+    "nonCompeteLimitedPlace": null,
+    "nonCompeteLimitedWork": null,
+    "weeklyHours": {
+     "value": 40,
+     "quote": "Your working week is 40 hours, Monday to Friday, 8 hours per day.",
+     "confidence": "high"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "Your working week is 40 hours, Monday to Friday, 8 hours per day.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "You will receive 30 calendar days of paid annual leave per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "calendar",
+     "quote": "You will receive 30 calendar days of paid annual leave per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": []
+   }
+  },
+  {
+   "letter": "02-clean-saltwater.txt",
+   "run": 2,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2521,
+   "found": [],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Graduate Data Analyst",
+     "quote": "We are pleased to offer you the role of Graduate Data Analyst.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "SALTWATER ANALYTICS LLC",
+     "quote": "SALTWATER ANALYTICS LLC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "Your contract will be a fixed-term contract for two years, renewable by agreement.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "Your contract will be a fixed-term contract for two years, renewable by agreement.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 9000,
+     "quote": "Your gross monthly salary is AED 9,000, consisting of a basic salary of AED 5,400 and a housing and transport allowance of AED 3,600.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 5400,
+     "quote": "Your gross monthly salary is AED 9,000, consisting of a basic salary of AED 5,400 and a housing and transport allowance of AED 3,600.",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Your probation period is six (6) months.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "You will receive your full salary during probation.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "During probation the Company may end your employment with at least 14 days' written notice",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, either party may terminate the contract with 30 days' written notice.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": null,
+    "nonCompeteLimitedPlace": null,
+    "nonCompeteLimitedWork": null,
+    "weeklyHours": {
+     "value": 40,
+     "quote": "Your working week is 40 hours, Monday to Friday, 8 hours per day.",
+     "confidence": "high"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "Your working week is 40 hours, Monday to Friday, 8 hours per day.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "You will receive 30 calendar days of paid annual leave per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "calendar",
+     "quote": "You will receive 30 calendar days of paid annual leave per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Probationary Notice",
+      "quote": "if you wish to leave, the notice periods set out in the UAE labour law apply."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "03-oasis-retail.txt",
+   "run": 1,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2460,
+   "found": [
+    "working-hours",
+    "notice-period",
+    "annual-leave",
+    "recruitment-costs"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Sales Associate",
+     "quote": "We are happy to offer you employment as Sales Associate at our Dubai Festival City store.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "OASIS RETAIL TRADING LLC",
+     "quote": "OASIS RETAIL TRADING LLC",
+     "confidence": "high"
+    },
+    "contractType": null,
+    "contractMonths": null,
+    "totalMonthlyAed": {
+     "value": 4500,
+     "quote": "Salary: AED 4,500 per month all-inclusive (basic AED 3,000, allowances AED 1,500).",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 3000,
+     "quote": "Salary: AED 4,500 per month all-inclusive (basic AED 3,000, allowances AED 1,500).",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Probation: 6 months.",
+     "confidence": "high"
+    },
+    "probationPaid": null,
+    "noticeDaysProbation": null,
+    "noticeDaysAfterProbation": {
+     "value": 15,
+     "quote": "Either party may terminate the employment after probation by giving 15 days notice.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": null,
+    "nonCompeteLimitedPlace": null,
+    "nonCompeteLimitedWork": null,
+    "weeklyHours": {
+     "value": 54,
+     "quote": "Working hours: 9 hours per day, 6 days per week, on a rotating shift pattern.",
+     "confidence": "medium"
+    },
+    "dailyHours": {
+     "value": 9,
+     "quote": "Working hours: 9 hours per day, 6 days per week, on a rotating shift pattern.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 21,
+     "quote": "Annual leave: 21 days per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "not stated",
+     "quote": "Annual leave: 21 days per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": {
+     "value": "recruitment agency fee",
+     "quote": "The recruitment agency fee of AED 2,000 paid on your behalf will be deducted from your first two salaries.",
+     "confidence": "high"
+    },
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Recruitment fee deduction",
+      "quote": "The recruitment agency fee of AED 2,000 paid on your behalf will be deducted from your first two salaries."
+     },
+     {
+      "topic": "Notice period during probation",
+      "quote": "Either party may terminate the employment after probation by giving 15 days notice."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "03-oasis-retail.txt",
+   "run": 2,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2269,
+   "found": [
+    "working-hours",
+    "notice-period",
+    "annual-leave",
+    "recruitment-costs"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Sales Associate",
+     "quote": "We are happy to offer you employment as Sales Associate at our Dubai Festival City store.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "OASIS RETAIL TRADING LLC",
+     "quote": "OASIS RETAIL TRADING LLC",
+     "confidence": "high"
+    },
+    "contractType": null,
+    "contractMonths": null,
+    "totalMonthlyAed": {
+     "value": 4500,
+     "quote": "Salary: AED 4,500 per month all-inclusive (basic AED 3,000, allowances AED 1,500).",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 3000,
+     "quote": "Salary: AED 4,500 per month all-inclusive (basic AED 3,000, allowances AED 1,500).",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Probation: 6 months.",
+     "confidence": "high"
+    },
+    "probationPaid": null,
+    "noticeDaysProbation": null,
+    "noticeDaysAfterProbation": {
+     "value": 15,
+     "quote": "Either party may terminate the employment after probation by giving 15 days notice.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": null,
+    "nonCompeteLimitedPlace": null,
+    "nonCompeteLimitedWork": null,
+    "weeklyHours": {
+     "value": 54,
+     "quote": "Working hours: 9 hours per day, 6 days per week, on a rotating shift pattern.",
+     "confidence": "medium"
+    },
+    "dailyHours": {
+     "value": 9,
+     "quote": "Working hours: 9 hours per day, 6 days per week, on a rotating shift pattern.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 21,
+     "quote": "Annual leave: 21 days per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "not stated",
+     "quote": "Annual leave: 21 days per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": {
+     "value": "recruitment agency fee",
+     "quote": "The recruitment agency fee of AED 2,000 paid on your behalf will be deducted from your first two salaries.",
+     "confidence": "high"
+    },
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Recruitment fee deduction",
+      "quote": "The recruitment agency fee of AED 2,000 paid on your behalf will be deducted from your first two salaries."
+     },
+     {
+      "topic": "Probation termination",
+      "quote": "Either party may terminate the employment after probation by giving 15 days notice."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "04-palmcode-intern.txt",
+   "run": 1,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2757,
+   "found": [
+    "probation-paid",
+    "non-compete"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Junior Frontend Developer",
+     "quote": "We would like to offer you a position as Junior Frontend Developer, starting with an internship-to-hire track.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "PalmCode Technologies LLC",
+     "quote": "PalmCode Technologies LLC — Dubai Internet City",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "You will join on a fixed-term employment contract of 12 months.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 12,
+     "quote": "You will join on a fixed-term employment contract of 12 months.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 7000,
+     "quote": "AED 7,000 per month (basic salary AED 4,200; allowances AED 2,800), starting after probation.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 4200,
+     "quote": "basic salary AED 4,200",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 3,
+     "quote": "Your probation will last three (3) months, during which no salary is payable as this period is considered training.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": false,
+     "quote": "Your probation will last three (3) months, during which no salary is payable as this period is considered training.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "During probation, either party may end the arrangement with 14 days' notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, one month's notice applies to both parties.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": {
+     "value": 12,
+     "quote": "For 12 months after leaving, you will not join a direct competitor of PalmCode that develops web or mobile software, within the Emirate of Dubai.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedPlace": {
+     "value": true,
+     "quote": "within the Emirate of Dubai.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedWork": {
+     "value": true,
+     "quote": "you will not join a direct competitor of PalmCode that develops web or mobile software",
+     "confidence": "high"
+    },
+    "weeklyHours": {
+     "value": 45,
+     "quote": "45 hours per week, Sunday to Thursday.",
+     "confidence": "high"
+    },
+    "dailyHours": null,
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "30 days of annual leave per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "not stated",
+     "quote": "30 days of annual leave per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Unpaid probation period",
+      "quote": "Your probation will last three (3) months, during which no salary is payable as this period is considered training."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "04-palmcode-intern.txt",
+   "run": 2,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2723,
+   "found": [
+    "probation-paid",
+    "non-compete"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Junior Frontend Developer",
+     "quote": "We would like to offer you a position as Junior Frontend Developer, starting with an internship-to-hire track.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "PalmCode Technologies LLC",
+     "quote": "PalmCode Technologies LLC — Dubai Internet City",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "You will join on a fixed-term employment contract of 12 months.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 12,
+     "quote": "You will join on a fixed-term employment contract of 12 months.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 7000,
+     "quote": "AED 7,000 per month (basic salary AED 4,200; allowances AED 2,800), starting after probation.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 4200,
+     "quote": "AED 7,000 per month (basic salary AED 4,200; allowances AED 2,800), starting after probation.",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 3,
+     "quote": "Your probation will last three (3) months, during which no salary is payable as this period is considered training.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": false,
+     "quote": "Your probation will last three (3) months, during which no salary is payable as this period is considered training.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "During probation, either party may end the arrangement with 14 days' notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, one month's notice applies to both parties.",
+     "confidence": "medium"
+    },
+    "nonCompeteMonths": {
+     "value": 12,
+     "quote": "For 12 months after leaving, you will not join a direct competitor of PalmCode that develops web or mobile software, within the Emirate of Dubai.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedPlace": {
+     "value": true,
+     "quote": "For 12 months after leaving, you will not join a direct competitor of PalmCode that develops web or mobile software, within the Emirate of Dubai.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedWork": {
+     "value": true,
+     "quote": "For 12 months after leaving, you will not join a direct competitor of PalmCode that develops web or mobile software, within the Emirate of Dubai.",
+     "confidence": "high"
+    },
+    "weeklyHours": {
+     "value": 45,
+     "quote": "Working hours: 45 hours per week, Sunday to Thursday.",
+     "confidence": "high"
+    },
+    "dailyHours": null,
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "Leave: 30 days of annual leave per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "not stated",
+     "quote": "Leave: 30 days of annual leave per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Unpaid probation period",
+      "quote": "Your probation will last three (3) months, during which no salary is payable as this period is considered training."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "05-falcon-startup.txt",
+   "run": 1,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2457,
+   "found": [
+    "contract-type",
+    "basic-share",
+    "deductions",
+    "non-compete"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Backend Engineer",
+     "quote": "- Role: Backend Engineer",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "Falcon Labs LLC",
+     "quote": "From: Founders, Falcon Labs LLC (Abu Dhabi)",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "unlimited",
+     "quote": "- Contract: unlimited contract",
+     "confidence": "high"
+    },
+    "contractMonths": null,
+    "totalMonthlyAed": {
+     "value": 12000,
+     "quote": "- Monthly package: AED 12,000 total.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 3000,
+     "quote": "Basic is AED 3,000",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "- Probation: 6 months, fully paid.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "- Probation: 6 months, fully paid.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": null,
+    "noticeDaysAfterProbation": {
+     "value": 60,
+     "quote": "- Notice after probation: 60 days.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": {
+     "value": 999,
+     "quote": "- Non-compete: you agree never to work for any company in any industry after leaving Falcon Labs.",
+     "confidence": "medium"
+    },
+    "nonCompeteLimitedPlace": {
+     "value": false,
+     "quote": "- Non-compete: you agree never to work for any company in any industry after leaving Falcon Labs.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedWork": {
+     "value": false,
+     "quote": "- Non-compete: you agree never to work for any company in any industry after leaving Falcon Labs.",
+     "confidence": "high"
+    },
+    "weeklyHours": {
+     "value": 40,
+     "quote": "- Hours: standard 40-hour week; startups need flexibility, so expect occasional late nights.",
+     "confidence": "high"
+    },
+    "dailyHours": null,
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "- Leave: 30 calendar days a year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "calendar",
+     "quote": "- Leave: 30 calendar days a year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": null,
+    "wageDeductions": {
+     "value": "lost or damaged equipment and for repeated late arrival",
+     "quote": "- Deductions: the company may deduct from your salary for lost or damaged equipment and for repeated late arrival.",
+     "confidence": "high"
+    },
+    "otherConcerns": [
+     {
+      "topic": "Unpaid Overtime",
+      "quote": "startups need flexibility, so expect occasional late nights."
+     },
+     {
+      "topic": "Short acceptance deadline",
+      "quote": "Let us know by Friday!"
+     }
+    ]
+   }
+  },
+  {
+   "letter": "05-falcon-startup.txt",
+   "run": 2,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2305,
+   "found": [
+    "contract-type",
+    "basic-share",
+    "deductions",
+    "non-compete"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Backend Engineer",
+     "quote": "Role: Backend Engineer",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "Falcon Labs LLC",
+     "quote": "Founders, Falcon Labs LLC (Abu Dhabi)",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "unlimited",
+     "quote": "Contract: unlimited contract",
+     "confidence": "high"
+    },
+    "contractMonths": null,
+    "totalMonthlyAed": {
+     "value": 12000,
+     "quote": "Monthly package: AED 12,000 total.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 3000,
+     "quote": "Basic is AED 3,000",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Probation: 6 months, fully paid.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Probation: 6 months, fully paid.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": null,
+    "noticeDaysAfterProbation": {
+     "value": 60,
+     "quote": "Notice after probation: 60 days.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": {
+     "value": 999,
+     "quote": "you agree never to work for any company in any industry after leaving Falcon Labs.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedPlace": {
+     "value": false,
+     "quote": "you agree never to work for any company in any industry after leaving Falcon Labs.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedWork": {
+     "value": false,
+     "quote": "you agree never to work for any company in any industry after leaving Falcon Labs.",
+     "confidence": "high"
+    },
+    "weeklyHours": {
+     "value": 40,
+     "quote": "Hours: standard 40-hour week; startups need flexibility, so expect occasional late nights.",
+     "confidence": "high"
+    },
+    "dailyHours": null,
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "Leave: 30 calendar days a year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "calendar",
+     "quote": "Leave: 30 calendar days a year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": null,
+    "wageDeductions": {
+     "value": "lost or damaged equipment and for repeated late arrival",
+     "quote": "the company may deduct from your salary for lost or damaged equipment and for repeated late arrival.",
+     "confidence": "high"
+    },
+    "otherConcerns": [
+     {
+      "topic": "Unpaid Overtime",
+      "quote": "startups need flexibility, so expect occasional late nights."
+     },
+     {
+      "topic": "Acceptance Deadline",
+      "quote": "Let us know by Friday!"
+     }
+    ]
+   }
+  },
+  {
+   "letter": "06-gulfstone-bank.txt",
+   "run": 1,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2309,
+   "found": [
+    "notice-period",
+    "non-compete"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Graduate Trainee",
+     "quote": "You are offered the position of Graduate Trainee in Retail Banking, based in Dubai.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "GULFSTONE BANK PJSC",
+     "quote": "GULFSTONE BANK PJSC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "Fixed term of 24 months, renewable.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "Fixed term of 24 months, renewable.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 13000,
+     "quote": "Total AED 13,000 per month.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 8000,
+     "quote": "Monthly basic salary AED 8,000; housing allowance AED 4,000; transport allowance AED 1,000.",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Probation. Six months.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Salary is paid in full during probation.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "The Bank may terminate during probation with 14 days' notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 120,
+     "quote": "After confirmation, the notice period is 120 days for both parties.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": {
+     "value": 18,
+     "quote": "For 18 months after the end of your employment, you shall not take up employment in retail banking with another bank in the United Arab Emirates.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedPlace": {
+     "value": true,
+     "quote": "in the United Arab Emirates.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedWork": {
+     "value": true,
+     "quote": "employment in retail banking with another bank",
+     "confidence": "high"
+    },
+    "weeklyHours": {
+     "value": 40,
+     "quote": "8 hours per day, five days per week.",
+     "confidence": "medium"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "8 hours per day, five days per week.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "30 calendar days per annum.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "calendar",
+     "quote": "30 calendar days per annum.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Notice period length",
+      "quote": "After confirmation, the notice period is 120 days for both parties."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "06-gulfstone-bank.txt",
+   "run": 2,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2463,
+   "found": [
+    "notice-period",
+    "non-compete"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Graduate Trainee",
+     "quote": "You are offered the position of Graduate Trainee in Retail Banking, based in Dubai.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "GULFSTONE BANK PJSC",
+     "quote": "GULFSTONE BANK PJSC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "Fixed term of 24 months, renewable.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "Fixed term of 24 months, renewable.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 13000,
+     "quote": "Total AED 13,000 per month.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 8000,
+     "quote": "Monthly basic salary AED 8,000; housing allowance AED 4,000; transport allowance AED 1,000.",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Probation. Six months.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Salary is paid in full during probation.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "The Bank may terminate during probation with 14 days' notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 120,
+     "quote": "After confirmation, the notice period is 120 days for both parties.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": {
+     "value": 18,
+     "quote": "For 18 months after the end of your employment, you shall not take up employment in retail banking with another bank in the United Arab Emirates.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedPlace": {
+     "value": true,
+     "quote": "For 18 months after the end of your employment, you shall not take up employment in retail banking with another bank in the United Arab Emirates.",
+     "confidence": "high"
+    },
+    "nonCompeteLimitedWork": {
+     "value": true,
+     "quote": "For 18 months after the end of your employment, you shall not take up employment in retail banking with another bank in the United Arab Emirates.",
+     "confidence": "high"
+    },
+    "weeklyHours": {
+     "value": 40,
+     "quote": "8 hours per day, five days per week.",
+     "confidence": "medium"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "8 hours per day, five days per week.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "30 calendar days per annum.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "calendar",
+     "quote": "30 calendar days per annum.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": null,
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Notice Period Duration",
+      "quote": "After confirmation, the notice period is 120 days for both parties."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "07-crescent-sales.txt",
+   "run": 1,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2439,
+   "found": [
+    "recruitment-costs",
+    "passport"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Junior Account Executive",
+     "quote": "We are pleased to appoint you as Junior Account Executive under a two-year fixed-term contract.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "Crescent Media Sales LLC",
+     "quote": "Crescent Media Sales LLC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "under a two-year fixed-term contract.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "under a two-year fixed-term contract.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 6000,
+     "quote": "Your monthly salary will be AED 6,000 (basic AED 3,600, allowances AED 2,400).",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 3600,
+     "quote": "Your monthly salary will be AED 6,000 (basic AED 3,600, allowances AED 2,400).",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Your probation period is 6 months with full pay.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Your probation period is 6 months with full pay.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "The company may end your employment during probation with 14 days' written notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, the notice period is one month.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": null,
+    "nonCompeteLimitedPlace": null,
+    "nonCompeteLimitedWork": null,
+    "weeklyHours": {
+     "value": 48,
+     "quote": "Your normal working hours are 48 hours per week across six days of 8 hours.",
+     "confidence": "high"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "Your normal working hours are 48 hours per week across six days of 8 hours.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "You are entitled to 30 days' annual leave per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "not stated",
+     "quote": "You are entitled to 30 days' annual leave per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": {
+     "value": true,
+     "quote": "Your passport will be kept by the company for safekeeping and released for travel upon approval.",
+     "confidence": "high"
+    },
+    "costsChargedToEmployee": {
+     "value": "employment visa, Emirates ID and medical test",
+     "quote": "The cost of your employment visa, Emirates ID and medical test (AED 3,500) will be deducted from your salary in equal instalments over your first three months.",
+     "confidence": "high"
+    },
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Employer retention of passport",
+      "quote": "Your passport will be kept by the company for safekeeping and released for travel upon approval."
+     },
+     {
+      "topic": "Recruitment cost recovery",
+      "quote": "The cost of your employment visa, Emirates ID and medical test (AED 3,500) will be deducted from your salary in equal instalments over your first three months."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "07-crescent-sales.txt",
+   "run": 2,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2559,
+   "found": [
+    "recruitment-costs",
+    "passport"
+   ],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Junior Account Executive",
+     "quote": "We are pleased to appoint you as Junior Account Executive under a two-year fixed-term contract.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "Crescent Media Sales LLC",
+     "quote": "Crescent Media Sales LLC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "under a two-year fixed-term contract.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "under a two-year fixed-term contract.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 6000,
+     "quote": "Your monthly salary will be AED 6,000 (basic AED 3,600, allowances AED 2,400).",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 3600,
+     "quote": "Your monthly salary will be AED 6,000 (basic AED 3,600, allowances AED 2,400).",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Your probation period is 6 months with full pay.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Your probation period is 6 months with full pay.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "The company may end your employment during probation with 14 days' written notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, the notice period is one month.",
+     "confidence": "medium"
+    },
+    "nonCompeteMonths": null,
+    "nonCompeteLimitedPlace": null,
+    "nonCompeteLimitedWork": null,
+    "weeklyHours": {
+     "value": 48,
+     "quote": "Your normal working hours are 48 hours per week across six days of 8 hours.",
+     "confidence": "high"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "Your normal working hours are 48 hours per week across six days of 8 hours.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "You are entitled to 30 days' annual leave per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "not stated",
+     "quote": "You are entitled to 30 days' annual leave per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": {
+     "value": true,
+     "quote": "Your passport will be kept by the company for safekeeping and released for travel upon approval.",
+     "confidence": "high"
+    },
+    "costsChargedToEmployee": {
+     "value": "employment visa, Emirates ID and medical test",
+     "quote": "The cost of your employment visa, Emirates ID and medical test (AED 3,500) will be deducted from your salary in equal instalments over your first three months.",
+     "confidence": "high"
+    },
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Passport retention",
+      "quote": "Your passport will be kept by the company for safekeeping and released for travel upon approval."
+     },
+     {
+      "topic": "Recruitment costs recovery",
+      "quote": "The cost of your employment visa, Emirates ID and medical test (AED 3,500) will be deducted from your salary in equal instalments over your first three months."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "08-clean-tricky-cedar.txt",
+   "run": 1,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2193,
+   "found": [],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Junior QA Engineer",
+     "quote": "We are delighted to offer you the role of Junior QA Engineer on a fixed-term contract of two years.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "CEDAR HEALTH TECH LLC",
+     "quote": "CEDAR HEALTH TECH LLC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "fixed-term contract of two years.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "fixed-term contract of two years.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 8500,
+     "quote": "Salary. AED 8,500 per month: basic salary AED 5,100 and allowances of AED 3,400.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 5100,
+     "quote": "basic salary AED 5,100",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Your probation shall not exceed six months and is fully paid.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Your probation shall not exceed six months and is fully paid.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "If the company decides not to continue during probation, it will give you at least 14 days' written notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, the notice period is 30 days for either party.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": null,
+    "nonCompeteLimitedPlace": null,
+    "nonCompeteLimitedWork": null,
+    "weeklyHours": {
+     "value": 40,
+     "quote": "8 hours per day, 40 hours per week.",
+     "confidence": "high"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "8 hours per day, 40 hours per week.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "30 calendar days of paid annual leave per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "calendar",
+     "quote": "30 calendar days of paid annual leave per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": {
+     "value": false,
+     "quote": "Your passport and all personal documents remain in your own possession at all times.",
+     "confidence": "high"
+    },
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Confidentiality obligations",
+      "quote": "You must keep company information confidential during and after your employment."
+     }
+    ]
+   }
+  },
+  {
+   "letter": "08-clean-tricky-cedar.txt",
+   "run": 2,
+   "model": "gemini-3.1-flash-lite",
+   "ms": 2198,
+   "found": [],
+   "missed": [],
+   "falseAlarms": [],
+   "unconfirmed": [],
+   "terms": {
+    "role": {
+     "value": "Junior QA Engineer",
+     "quote": "We are delighted to offer you the role of Junior QA Engineer on a fixed-term contract of two years.",
+     "confidence": "high"
+    },
+    "employer": {
+     "value": "CEDAR HEALTH TECH LLC",
+     "quote": "CEDAR HEALTH TECH LLC",
+     "confidence": "high"
+    },
+    "contractType": {
+     "value": "fixed-term",
+     "quote": "fixed-term contract of two years.",
+     "confidence": "high"
+    },
+    "contractMonths": {
+     "value": 24,
+     "quote": "fixed-term contract of two years.",
+     "confidence": "high"
+    },
+    "totalMonthlyAed": {
+     "value": 8500,
+     "quote": "Salary. AED 8,500 per month: basic salary AED 5,100 and allowances of AED 3,400.",
+     "confidence": "high"
+    },
+    "basicMonthlyAed": {
+     "value": 5100,
+     "quote": "Salary. AED 8,500 per month: basic salary AED 5,100 and allowances of AED 3,400.",
+     "confidence": "high"
+    },
+    "probationMonths": {
+     "value": 6,
+     "quote": "Your probation shall not exceed six months and is fully paid.",
+     "confidence": "high"
+    },
+    "probationPaid": {
+     "value": true,
+     "quote": "Your probation shall not exceed six months and is fully paid.",
+     "confidence": "high"
+    },
+    "noticeDaysProbation": {
+     "value": 14,
+     "quote": "If the company decides not to continue during probation, it will give you at least 14 days' written notice.",
+     "confidence": "high"
+    },
+    "noticeDaysAfterProbation": {
+     "value": 30,
+     "quote": "After probation, the notice period is 30 days for either party.",
+     "confidence": "high"
+    },
+    "nonCompeteMonths": null,
+    "nonCompeteLimitedPlace": null,
+    "nonCompeteLimitedWork": null,
+    "weeklyHours": {
+     "value": 40,
+     "quote": "8 hours per day, 40 hours per week.",
+     "confidence": "high"
+    },
+    "dailyHours": {
+     "value": 8,
+     "quote": "8 hours per day, 40 hours per week.",
+     "confidence": "high"
+    },
+    "annualLeaveDays": {
+     "value": 30,
+     "quote": "30 calendar days of paid annual leave per year.",
+     "confidence": "high"
+    },
+    "annualLeaveDayType": {
+     "value": "calendar",
+     "quote": "30 calendar days of paid annual leave per year.",
+     "confidence": "high"
+    },
+    "trainingPaybackAed": null,
+    "passportHeldByEmployer": {
+     "value": false,
+     "quote": "Your passport and all personal documents remain in your own possession at all times.",
+     "confidence": "high"
+    },
+    "costsChargedToEmployee": null,
+    "wageDeductions": null,
+    "otherConcerns": [
+     {
+      "topic": "Confidentiality",
+      "quote": "You must keep company information confidential during and after your employment."
+     }
+    ]
+   }
+  }
+ ]
+}
