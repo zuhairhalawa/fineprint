@@ -30,6 +30,7 @@ export interface Terms {
   weeklyHours: Term<number> | null;
   dailyHours: Term<number> | null;
   annualLeaveDays: Term<number> | null;
+  annualLeaveDayType: Term<'working' | 'calendar' | 'not stated'> | null;
   trainingPaybackAed: Term<number | null> | null;
   passportHeldByEmployer: Term<boolean> | null;
   costsChargedToEmployee: Term<string> | null;
