@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fineprint: check a UAE job offer before you sign</title>
+    <meta name="description" content="For students and fresh graduates in the UAE: check a job offer against UAE labour law. Personal details are blacked out on your device first. Information, not legal advice." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="wordmark" href="/" aria-label="Fineprint, start over">Fineprint</a>
+      <p class="top-note">UAE job offers, checked against Federal Decree-Law 33 of 2021. Information, not legal advice.</p>
+    </header>
+
+    <main>
+      <!-- 1. Add the offer -->
+      <section id="start" class="screen">
+        <div class="intro">
+          <h1>Read the fine print before you sign.</h1>
+          <p class="lede">
+            Your first offer letter in the UAE is full of terms nobody explains: probation, basic salary, non-compete, notice.
+            Fineprint reads it, checks each term against UAE labour law, shows what it means in dirhams, and drafts the questions to ask HR.
+          </p>
+        </div>
+
+        <div class="add">
+          <label class="drop" id="drop">
+            <input id="file" type="file" accept="application/pdf,image/*" hidden />
+            <span class="drop-title">Add your offer letter</span>
+            <span class="drop-sub">Drop a PDF or a photo here, or choose a file</span>
+          </label>
+          <div class="add-row">
+            <label class="btn" for="camera">Take a photo<input id="camera" type="file" accept="image/*" capture="environment" hidden /></label>
+            <button class="btn" id="paste-open" type="button">Paste the text</button>
+            <button class="btn primary" id="sample" type="button">Try the sample letter</button>
+          </div>
+          <div id="paste-box" class="paste" hidden>
+            <label for="paste-text">Paste the letter's text</label>
+            <textarea id="paste-text" rows="10" placeholder="Paste the whole offer letter here"></textarea>
+            <button class="btn primary" id="paste-go" type="button">Continue</button>
+          </div>
+          <p id="start-status" class="status" role="status" aria-live="polite"></p>
+        </div>
+
+        <ul class="promises">
+          <li><strong>Blacked out first.</strong> Names, emails, phone numbers, Emirates ID and passport numbers are hidden on your device before anything is sent. Photos never leave your device.</li>
+          <li><strong>Nothing is kept.</strong> No account, no history, no storage. Close the tab and it's gone.</li>
+          <li><strong>Checked, not guessed.</strong> AI reads the terms; tested rules judge them against the law and cite the article.</li>
+        </ul>
+      </section>
+
+      <!-- 2. Check what will be sent -->
+      <section id="review" class="screen" hidden>
+        <div class="screen-head">
+          <h2>Check what will be sent</h2>
+          <p>Blacked-out parts never leave your device. To hide more, select text in the letter and press <em>Black out selection</em>.</p>
+        </div>
+        <div class="review-tools">
+          <button class="btn" id="mask-selection" type="button">Black out selection</button>
+          <button class="btn quiet" id="mask-undo" type="button">Undo</button>
+          <span id="mask-count" class="mask-count"></span>
+        </div>
+        <div id="ocr-warning" class="warning" hidden></div>
+        <article id="review-paper" class="paper" tabindex="0" aria-label="The letter text that will be sent"></article>
+        <div class="actions">
+          <button class="btn primary big" id="check" type="button">Check my offer</button>
+          <button class="btn quiet" id="restart-1" type="button">Start over</button>
+        </div>
+      </section>
+
+      <!-- 3. Working -->
+      <section id="working" class="screen" hidden>
+        <h2>Checking your offer</h2>
+        <ol class="steps" id="steps">
+          <li data-step="read">AI reads the terms and quotes each one</li>
+          <li data-step="verify">Every quote is checked against your letter</li>
+          <li data-step="rules">Each term is checked against UAE labour law</li>
+          <li data-step="explain">AI explains the findings in plain English</li>
+        </ol>
+        <p id="working-status" class="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <!-- 4. Report -->
+      <section id="report" class="screen" hidden>
+        <div class="verdict">
+          <div class="tally" id="tally"></div>
+          <p class="summary" id="summary"></p>
+          <div class="verdict-actions">
+            <button class="btn" id="speak" type="button">Read aloud</button>
+            <button class="btn quiet" id="restart-2" type="button">Check another letter</button>
+          </div>
+        </div>
+        <div class="report-grid">
+          <div class="letter-col">
+            <div class="view-tabs" id="view-tabs" hidden>
+              <button type="button" data-view="photo" aria-pressed="true">Photo</button>
+              <button type="button" data-view="text" aria-pressed="false">Text</button>
+            </div>
+            <div id="photo-view" class="photo-view" hidden></div>
+            <article id="report-paper" class="paper" aria-label="Your letter with the findings highlighted"></article>
+          </div>
+          <div class="findings-col">
+            <ol id="findings" class="findings"></ol>
+            <div id="others" class="others" hidden></div>
+            <p id="unconfirmed" class="unconfirmed" hidden></p>
+          </div>
+        </div>
+        <section class="email" aria-labelledby="email-title">
+          <h2 id="email-title">Questions for HR</h2>
+          <p>A short, polite email you can edit and send. Asking is normal: good employers expect questions before you sign.</p>
+          <textarea id="email" rows="12"></textarea>
+          <button class="btn" id="copy-email" type="button">Copy email</button>
+          <span id="copy-status" class="status" role="status"></span>
+        </section>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>
+        Fineprint gives information, not legal advice. It covers private-sector jobs on the UAE mainland under Federal Decree-Law No. 33 of 2021.
+        Free zones with their own employment law (DIFC, ADGM), government jobs and domestic work follow other rules. For advice, contact MOHRE or a lawyer.
+        English letters only. <a href="https://github.com/zuhairhalawa/fineprint">Source code</a>.
+      </p>
+    </footer>
+    <script type="module" src="/src/ui/main.ts"></script>
+  </body>
+</html>
