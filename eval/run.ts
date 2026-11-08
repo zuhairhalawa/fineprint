@@ -15,7 +15,8 @@ import { check } from '../src/rules/rules.ts';
 import type { Terms } from '../src/types.ts';
 import { loadVars } from './try-read.ts';
 
-const dir = new URL('./letters/', import.meta.url);
+const set = process.argv[3] ?? 'letters';
+const dir = new URL(`./${set}/`, import.meta.url);
 const vars = loadVars();
 const models = (vars.GEMINI_MODELS ?? 'gemini-3-flash-preview').split(',');
 const runs = Number(process.argv[2] ?? 1);
@@ -71,6 +72,7 @@ const falseAlarms = rows.reduce((n, r) => n + r.falseAlarms.length, 0);
 const summary = {
   date: new Date().toISOString(),
   models: [...new Set(rows.map((r) => r.model))],
+  set,
   letters: new Set(rows.map((r) => r.letter)).size,
   runsPerLetter: runs,
   planted,
@@ -80,4 +82,4 @@ const summary = {
 };
 console.log(`\nFound ${found} of ${planted} planted issues, ${falseAlarms} false alarms.`, summary);
 mkdirSync(new URL('./out/', import.meta.url), { recursive: true });
-writeFileSync(new URL('./out/results.json', import.meta.url), JSON.stringify({ summary, rows }, null, 1));
+writeFileSync(new URL(`./out/results-${set}.json`, import.meta.url), JSON.stringify({ summary, rows }, null, 1));
