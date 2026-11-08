@@ -59,30 +59,42 @@ export async function ocrPages(images: HTMLCanvasElement[], source: Doc['source'
     const { data } = await worker.recognize(canvas, {}, { blocks: true, text: false });
     confSum += data.confidence;
     const words: Page['words'] = [];
-    if (text) text += '\n\n';
+    // Word positions are recorded on the final text, so nothing may be
+    // removed from it afterwards; blank lines are only added when needed.
+    const breakTo = (n: number) => {
+      if (!text) return;
+      const have = text.length - text.trimEnd().length;
+      if (have < n) text += '\n'.repeat(n - have);
+    };
+    breakTo(2);
     for (const block of (data.blocks ?? []) as unknown as TBlock[]) {
       for (const para of block.paragraphs) {
         for (const line of para.lines) {
           const lineWords = line.words.filter((w) => w.text.trim());
+          if (!lineWords.length) continue;
           lineWords.forEach((w, k) => {
             if (k > 0) text += ' ';
             const start = text.length;
-            text += w.text;
+            text += w.text.trim();
             const b = w.bbox;
             words.push({ start, end: text.length, x: b.x0, y: b.y0, w: b.x1 - b.x0, h: b.y1 - b.y0 });
           });
-          text += '\n';
+          breakTo(1);
         }
-        text += '\n';
+        breakTo(2);
       }
     }
     const blob = await new Promise<Blob>((r) => canvas.toBlob((b) => r(b!), 'image/jpeg', 0.9));
     pages.push({ imageUrl: URL.createObjectURL(blob), width: canvas.width, height: canvas.height, words });
   }
-  return { text: text.replace(/\n{3,}/g, '\n\n').trim(), source, pages, ocrConfidence: Math.round(confSum / images.length) };
+  // trimEnd only: removing from the end leaves every word position valid.
+  return { text: text.trimEnd(), source, pages, ocrConfidence: Math.round(confSum / images.length) };
 }
 
-export async function readPhoto(file: Blob, progress: Progress): Promise<Doc> {
-  progress('Preparing the photo', 0);
-  return ocrPages([await toCanvas(file)], 'photo', progress);
+/** Reads one photo per page, in the order given. */
+export async function readPhotos(files: Blob[], progress: Progress): Promise<Doc> {
+  progress(files.length > 1 ? 'Preparing the photos' : 'Preparing the photo', 0);
+  const canvases: HTMLCanvasElement[] = [];
+  for (const f of files) canvases.push(await toCanvas(f));
+  return ocrPages(canvases, 'photo', progress);
 }

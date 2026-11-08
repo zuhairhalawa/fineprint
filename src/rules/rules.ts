@@ -85,10 +85,12 @@ const nonCompete: Rule = ({ nonCompeteMonths: m, nonCompeteLimitedPlace: place, 
     summary:
       'A non-compete must be limited in time, place and type of work to what protects the employer’s legitimate interests, and can last at most 2 years after the contract ends. It does not apply if the contract ends during probation.',
   };
+  const scope: string[] = [];
+  if (place && !place.value) scope.push('any country');
+  if (work && !work.value) scope.push('any kind of work');
   const problems: string[] = [];
   if (m && m.value > 24) problems.push(m.value >= 999 ? 'has no end date' : `lasts ${m.value} months`);
-  if (place && !place.value) problems.push('covers any country or place');
-  if (work && !work.value) problems.push('covers any kind of work');
+  if (scope.length) problems.push(`covers ${scope.join(' and ')}`);
   if (problems.length)
     return {
       id: 'non-compete',

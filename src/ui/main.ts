@@ -34,17 +34,20 @@ function setStatus(id: string, msg: string, error = false): void {
 
 /* ---------- 1. Add the offer ---------- */
 
-async function loadFile(file: File): Promise<void> {
+async function loadFiles(list: FileList | File[] | null | undefined): Promise<void> {
+  const files = [...(list ?? [])].sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+  const file = files[0];
+  if (!file) return;
   const progress = (m: string, f?: number) => setStatus('start-status', f !== undefined && f > 0 && f < 1 ? `${m} (${Math.round(f * 100)}%)` : m);
   try {
     if (file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf')) {
       const { readPdf } = await import('../ingest/pdf.ts');
       await openReview(await readPdf(file, progress));
-    } else if (file.type.startsWith('image/')) {
-      const { readPhoto } = await import('../ingest/ocr.ts');
-      await openReview(await readPhoto(file, progress));
+    } else if (files.every((f) => f.type.startsWith('image/'))) {
+      const { readPhotos } = await import('../ingest/ocr.ts');
+      await openReview(await readPhotos(files.slice(0, 6), progress));
     } else {
-      setStatus('start-status', 'Please add a PDF or a photo of the letter.', true);
+      setStatus('start-status', 'Please add one PDF, or photos of the letter (one per page).', true);
     }
   } catch (e) {
     console.error(e);
@@ -52,14 +55,8 @@ async function loadFile(file: File): Promise<void> {
   }
 }
 
-$('file').addEventListener('change', (e) => {
-  const f = (e.target as HTMLInputElement).files?.[0];
-  if (f) void loadFile(f);
-});
-$('camera').addEventListener('change', (e) => {
-  const f = (e.target as HTMLInputElement).files?.[0];
-  if (f) void loadFile(f);
-});
+$('file').addEventListener('change', (e) => void loadFiles((e.target as HTMLInputElement).files));
+$('camera').addEventListener('change', (e) => void loadFiles((e.target as HTMLInputElement).files));
 const drop = $('drop');
 drop.addEventListener('dragover', (e) => {
   e.preventDefault();
@@ -69,8 +66,7 @@ drop.addEventListener('dragleave', () => drop.classList.remove('over'));
 drop.addEventListener('drop', (e) => {
   e.preventDefault();
   drop.classList.remove('over');
-  const f = e.dataTransfer?.files?.[0];
-  if (f) void loadFile(f);
+  void loadFiles(e.dataTransfer?.files);
 });
 $('paste-open').addEventListener('click', () => {
   $('paste-box').hidden = false;

@@ -84,17 +84,35 @@ export function renderPhotos(container: HTMLElement, doc: Doc, masks: Mask[], ma
     img.src = page.imageUrl;
     img.alt = 'Your letter, with personal details blacked out and findings highlighted';
     wrap.append(img);
+    // Neighbouring words on one line with the same mark become one stroke.
+    type Run = { cls: string; id?: string; x0: number; y0: number; x1: number; y1: number };
+    const runs: Run[] = [];
     for (const w of page.words) {
       const masked = masks.some((m) => m.start < w.end && m.end > w.start);
       const hit = marks.filter((m) => m.start < w.end && m.end > w.start).sort((a, b) => RANK[a.level] - RANK[b.level])[0];
-      if (!masked && !hit) continue;
-      const box = el('div', `box ${masked ? 'mask' : hit!.level}`);
-      const pad = 2;
-      box.style.left = `${((w.x - pad) / page.width) * 100}%`;
-      box.style.top = `${((w.y - pad) / page.height) * 100}%`;
-      box.style.width = `${((w.w + pad * 2) / page.width) * 100}%`;
-      box.style.height = `${((w.h + pad * 2) / page.height) * 100}%`;
-      if (hit && !masked) box.dataset.id = hit.id;
+      if (!masked && !hit) {
+        runs.push({ cls: '', x0: 0, y0: 0, x1: 0, y1: 0 });
+        continue;
+      }
+      const cls = masked ? 'mask' : hit!.level;
+      const id = masked ? undefined : hit!.id;
+      const last = runs[runs.length - 1];
+      const sameLine = last && Math.abs(last.y0 - w.y) < w.h * 0.6 && w.x > last.x0;
+      if (last && last.cls === cls && last.id === id && sameLine) {
+        last.x1 = w.x + w.w;
+        last.y0 = Math.min(last.y0, w.y);
+        last.y1 = Math.max(last.y1, w.y + w.h);
+      } else runs.push({ cls, id, x0: w.x, y0: w.y, x1: w.x + w.w, y1: w.y + w.h });
+    }
+    const pad = 3;
+    for (const r of runs) {
+      if (!r.cls) continue;
+      const box = el('div', `box ${r.cls}`);
+      box.style.left = `${((r.x0 - pad) / page.width) * 100}%`;
+      box.style.top = `${((r.y0 - pad) / page.height) * 100}%`;
+      box.style.width = `${((r.x1 - r.x0 + pad * 2) / page.width) * 100}%`;
+      box.style.height = `${((r.y1 - r.y0 + pad * 2) / page.height) * 100}%`;
+      if (r.id) box.dataset.id = r.id;
       wrap.append(box);
     }
     container.append(wrap);
