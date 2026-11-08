@@ -34,7 +34,8 @@ export function rateLimited(ip: string, limit: number, windowMs: number, now = D
 }
 
 /** Returns an error response, or null when the request may go ahead. */
-export function guard(request: Request, bucket: string, limitPerHour: number): Response | null {
+export function guard(request: Request, bucket: string, limitPerHour: number, env?: Env): Response | null {
+  if (env && !env.GEMINI_API_KEY) return json({ error: 'Fineprint is not set up yet (no AI key on the server).' }, 503);
   const origin = request.headers.get('Origin');
   if (!origin || origin !== new URL(request.url).origin) return json({ error: 'Requests must come from the Fineprint page.' }, 403);
   if (!(request.headers.get('Content-Type') ?? '').includes('application/json')) return json({ error: 'Send JSON.' }, 415);

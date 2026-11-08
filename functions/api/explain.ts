@@ -14,7 +14,7 @@ interface Explained {
 }
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
-  const blocked = guard(request, 'explain', 30);
+  const blocked = guard(request, 'explain', 30, env);
   if (blocked) return blocked;
   let body: { findings?: Finding[]; role?: string; employer?: string };
   try {

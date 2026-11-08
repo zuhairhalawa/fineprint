@@ -7,7 +7,7 @@ import { READ_SCHEMA, READ_SYSTEM } from '../../src/read/prompts.ts';
 import { type Env, MAX_CHARS, guard, json, models } from '../../src/server/guard.ts';
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
-  const blocked = guard(request, 'read', 20);
+  const blocked = guard(request, 'read', 20, env);
   if (blocked) return blocked;
   let text: unknown;
   try {
