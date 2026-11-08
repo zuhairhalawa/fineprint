@@ -13,3 +13,4 @@ eval/out/
 *.jpg
 *.jpeg
 *.heic
+public/vendor/
