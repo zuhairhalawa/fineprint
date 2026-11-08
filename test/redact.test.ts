@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { MASK_CHAR, redact } from '../src/redact/redact';
+import { MASK_CHAR, redact } from '../src/redact/redact.ts';
 
 const masked = (s: string) => MASK_CHAR.repeat(s.length);
 

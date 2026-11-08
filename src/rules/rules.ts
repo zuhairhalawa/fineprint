@@ -3,8 +3,8 @@
  * No AI here: these are plain, tested checks against Federal Decree-Law No. 33
  * of 2021 (see docs/law-notes.md for the articles and the sources).
  */
-import { gratuityGap } from '../money/gratuity';
-import type { Finding, Term, Terms } from '../types';
+import { gratuityGap } from '../money/gratuity.ts';
+import type { Finding, Term, Terms } from '../types.ts';
 
 type Rule = (t: Terms) => Finding | null;
 
@@ -204,8 +204,10 @@ const recruitmentCosts: Rule = ({ costsChargedToEmployee: c }) => {
   });
 };
 
-const deductions: Rule = ({ wageDeductions: d }) => {
+const deductions: Rule = ({ wageDeductions: d, costsChargedToEmployee: c }) => {
   if (!d) return null;
+  // A fee taken from salary is already covered by the recruitment-costs finding.
+  if (c && sameClause(c.quote, d.quote)) return null;
   return from(d, {
     id: 'deductions',
     level: 'amber',
@@ -235,18 +237,29 @@ const contractType: Rule = ({ contractType: c }) => {
     article: 'Art. 8(1), 8(3); Art. 66(2)',
     summary: 'Every contract must be written, fixed-term and renewable, on MOHRE forms, in Arabic plus a language you understand.',
   };
-  if (!c)
-    return null;
-  if (c.value === 'unlimited' || c.value === 'unclear')
-    return from(c, {
-      id: 'contract-type',
-      level: 'amber',
-      title: c.value === 'unlimited' ? 'The contract is described as unlimited' : 'The contract type is unclear',
-      law,
-      ask: 'Will I receive the official MOHRE contract, and what fixed term will it state?',
-    });
-  return null;
+  // Offer letters often leave the type to the MOHRE contract, so only a stated
+  // "unlimited" contract (the pre-2022 kind) is worth asking about.
+  if (!c || c.value !== 'unlimited') return null;
+  return from(c, {
+    id: 'contract-type',
+    level: 'amber',
+    title: 'The contract is described as unlimited',
+    law,
+    ask: 'Will I receive the official MOHRE contract, and what fixed term will it state?',
+  });
 };
+
+/** True when two quotes are about the same sentence (one contains most of the other's words). */
+function sameClause(a: string, b: string): boolean {
+  const words = (s: string) => new Set(s.toLowerCase().match(/[a-z0-9]+/g) ?? []);
+  const wa = words(a);
+  const wb = words(b);
+  const [small, big] = wa.size <= wb.size ? [wa, wb] : [wb, wa];
+  if (small.size === 0) return false;
+  let shared = 0;
+  for (const w of small) if (big.has(w)) shared++;
+  return shared / small.size >= 0.6;
+}
 
 export const RULES: Rule[] = [
   probationLength,

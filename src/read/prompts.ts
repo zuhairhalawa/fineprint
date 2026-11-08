@@ -2,7 +2,7 @@
  * Prompts and output formats for the two Gemini steps. Shared by the
  * server functions and the accuracy test, so both run the same thing.
  */
-import type { TermKey } from '../types';
+import type { TermKey } from '../types.ts';
 
 const conf = { type: 'string', enum: ['high', 'medium', 'low'] };
 
@@ -50,11 +50,14 @@ export const TERM_FIELDS: Record<TermKey, object> = {
   ),
   trainingPaybackAed: term(
     { anyOf: [num, { type: 'null' }] },
-    'A clause making the employee repay training, course or certification costs if they leave. Value is the AED amount, or null if no amount is given.',
+    'Only a clause that makes the employee repay training, course or certification costs if they leave. Value is the AED amount, or null if no amount is given. The whole term is null if the letter says training is free or there is no repayment.',
   ),
   passportHeldByEmployer: term(bool, 'True if the employer keeps or holds the employee passport or other official documents.'),
   costsChargedToEmployee: term(str, 'Any recruitment, visa, work permit, medical test or similar cost the employee must pay or that is deducted from pay. Value names the costs.'),
-  wageDeductions: term(str, 'Any other deduction from salary the letter allows (fines, penalties, equipment). Value names them.'),
+  wageDeductions: term(
+    str,
+    'Deductions from salary for other reasons (fines, penalties, lost or damaged equipment). Do not repeat costs already given in costsChargedToEmployee. Value names them.',
+  ),
 };
 
 export const READ_SCHEMA = {

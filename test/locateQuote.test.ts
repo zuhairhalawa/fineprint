@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { locateQuote } from '../src/read/locateQuote';
+import { locateQuote } from '../src/read/locateQuote.ts';
 
 const letter = `Dear Candidate,
 

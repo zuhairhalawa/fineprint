@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { gratuityAed, gratuityGap } from '../src/money/gratuity';
-import { check } from '../src/rules/rules';
-import type { Term, Terms } from '../src/types';
+import { gratuityAed, gratuityGap } from '../src/money/gratuity.ts';
+import { check } from '../src/rules/rules.ts';
+import type { Term, Terms } from '../src/types.ts';
 
 const t = <T>(value: T, quote = 'a clause from the letter'): Term<T> => ({ value, quote, confidence: 'high' });
 
@@ -126,7 +126,7 @@ describe('rules', () => {
     expect(one({ wageDeductions: t('laptop damage') }, 'deductions')?.level).toBe('amber');
   });
 
-  it('unlimited or unclear contract type is amber', () => {
+  it('unlimited contract type is amber', () => {
     expect(one({ contractType: t('unlimited' as const) }, 'contract-type')?.level).toBe('amber');
     expect(one({ contractType: t('fixed-term' as const) }, 'contract-type')).toBeUndefined();
   });
@@ -138,5 +138,22 @@ describe('rules', () => {
     expect(fs.map((f) => f.level)).toEqual(['red', 'amber', 'green']);
     expect(fs[2]?.quote).toBe('Probation is six months.');
     expect(fs[0]?.confidence).toBe('high');
+  });
+});
+
+describe('rules: duplicates and noise', () => {
+  it('does not flag a deduction that is the same clause as a cost charged to you', () => {
+    const q = 'The recruitment agency fee of AED 2,000 will be deducted from your first two salaries.';
+    const fs = check(terms({ costsChargedToEmployee: t('recruitment agency fee', q), wageDeductions: t('agency fee', q) }));
+    expect(fs.map((f) => f.id)).toEqual(['recruitment-costs']);
+  });
+  it('keeps a deduction that is a different clause', () => {
+    const fs = check(
+      terms({ costsChargedToEmployee: t('visa', 'Visa costs are deducted.'), wageDeductions: t('equipment damage', 'Lost laptops will be charged to you.') }),
+    );
+    expect(fs.map((f) => f.id).sort()).toEqual(['deductions', 'recruitment-costs']);
+  });
+  it('does not flag an unclear contract type', () => {
+    expect(one({ contractType: t('unclear' as const) }, 'contract-type')).toBeUndefined();
   });
 });

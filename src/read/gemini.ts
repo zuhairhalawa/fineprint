@@ -19,8 +19,30 @@ export class GeminiError extends Error {
 
 const BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 
-/** Calls each model in turn until one answers; returns the parsed JSON and the model used. */
-export async function geminiJson<T>(o: GeminiOptions): Promise<{ data: T; model: string }> {
+const BUSY = [404, 429, 500, 503];
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Calls each model in turn until one answers; returns the parsed JSON and the
+ * model used. When every model is busy, waits and tries the list again
+ * (`rounds` times in all).
+ */
+export async function geminiJson<T>(o: GeminiOptions & { rounds?: number; waitMs?: number }): Promise<{ data: T; model: string }> {
+  let last: GeminiError = new GeminiError('No model configured', 500);
+  const rounds = o.rounds ?? 3;
+  for (let round = 0; round < rounds; round++) {
+    if (round > 0) await sleep((o.waitMs ?? 2000) * round);
+    try {
+      return await tryModels<T>(o);
+    } catch (e) {
+      last = e as GeminiError;
+      if (!BUSY.includes(last.status)) throw last;
+    }
+  }
+  throw last;
+}
+
+async function tryModels<T>(o: GeminiOptions): Promise<{ data: T; model: string }> {
   let last: GeminiError = new GeminiError('No model configured', 500);
   for (const model of o.models) {
     const ctl = new AbortController();
@@ -39,14 +61,14 @@ export async function geminiJson<T>(o: GeminiOptions): Promise<{ data: T; model:
       if (!res.ok) {
         last = new GeminiError(`Gemini ${model} answered ${res.status}`, res.status);
         // Busy, rate-limited or retired model: try the next one.
-        if ([404, 429, 500, 503].includes(res.status)) continue;
+        if (BUSY.includes(res.status)) continue;
         throw last;
       }
       const body = (await res.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
       const text = body.candidates?.[0]?.content?.parts?.map((p) => p.text ?? '').join('') ?? '';
       return { data: JSON.parse(text) as T, model };
     } catch (e) {
-      if (e instanceof GeminiError && ![404, 429, 500, 503].includes(e.status)) throw e;
+      if (e instanceof GeminiError && !BUSY.includes(e.status)) throw e;
       last = e instanceof GeminiError ? e : new GeminiError(`Gemini ${model} failed: ${(e as Error).message}`, 502);
     } finally {
       clearTimeout(timer);
