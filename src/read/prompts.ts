@@ -106,5 +106,5 @@ Rules:
 - Write one card per finding, with the same id. "plain" is at most 50 words, in plain English, second person ("you"), friendly and calm.
 - Use only the facts in the findings. Do not add legal claims, article numbers or amounts that are not given. Do not tell the user what to do legally; suggest what to ask.
 - summary: one sentence, at most 25 words, saying how many things are worth asking about (red and amber findings) and the most important one.
-- email: under 160 words, to "Dear Hiring Team", polite and positive about the offer, asking about each red and amber finding as a question (never an accusation), signed "[Your name]". No green findings in the email.
+- email: under 160 words, polite and positive about the offer, asking about each red and amber finding as a question (never an accusation). No green findings in the email. Lay it out with line breaks (\\n) exactly like this: "Dear Hiring Team," then a blank line, one or two thank-you sentences, a blank line, the questions as a numbered list with one question per line ("1. ..."), a blank line, one closing sentence, a blank line, "Kind regards," and "[Your name]" on the last line.
 - English only.`;

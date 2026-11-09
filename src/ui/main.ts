@@ -191,7 +191,11 @@ function applyExplanations(findings: Finding[], explained: Explained | null): vo
     } else p.remove();
   }
   if (explained?.summary) $('summary').textContent = explained.summary;
-  if (explained?.email) $<HTMLTextAreaElement>('email').value = explained.email;
+  if (explained?.email) {
+    let email = explained.email.trim();
+    if (!email.includes('[Your name]')) email += '\n\nKind regards,\n[Your name]';
+    $<HTMLTextAreaElement>('email').value = email;
+  }
   spoken = [
     $('summary').textContent ?? '',
     ...findings.filter((f) => f.level !== 'green').map((f) => `${f.title}. ${plain.get(f.id) ?? f.law.summary}`),
